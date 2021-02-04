@@ -79,7 +79,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = "Emre Yolcu";
+				ORGANIZATIONNAME = tomarint;
 				TargetAttributes = {
 					C32391391DE7B5670068C5B9 = {
 						CreatedOnToolsVersion = 6.2;
@@ -88,7 +88,7 @@
 			};
 			buildConfigurationList = C32391351DE7B5670068C5B9 /* Build configuration list for PBXProject "DiscreteScroll" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -209,6 +209,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DiscreteScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -220,6 +221,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = DiscreteScroll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MARKETING_VERSION = 2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -243,6 +245,7 @@
 				C32391591DE7B5670068C5B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

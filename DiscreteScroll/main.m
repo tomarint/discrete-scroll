@@ -1,14 +1,23 @@
 #import <ApplicationServices/ApplicationServices.h>
 
 #define SIGN(x) (((x) > 0) - ((x) < 0))
-#define LINES 3
+#define LINES 20
 
 CGEventRef cgEventCallback(CGEventTapProxy proxy, CGEventType type,
                            CGEventRef event, void *refcon)
 {
-    if (!CGEventGetIntegerValueField(event, kCGScrollWheelEventIsContinuous)) {
+    int64_t value = 0;
+    
+    value = CGEventGetIntegerValueField(event, kCGScrollWheelEventIsContinuous);
+    if (value == 0) {
         int64_t delta = CGEventGetIntegerValueField(event, kCGScrollWheelEventPointDeltaAxis1);
         
+        CGEventSetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1, SIGN(delta) * LINES);
+    } else {
+        void NSLog(NSString *format, ...);
+        int64_t delta = CGEventGetIntegerValueField(event, kCGScrollWheelEventPointDeltaAxis1);
+        //NSLog(@"kCGScrollWheelEventPointDeltaAxis1 = %lld", delta);
+        //CGEventSetIntegerValueField(event, kCGScrollWheelEventIsContinuous, 1);
         CGEventSetIntegerValueField(event, kCGScrollWheelEventDeltaAxis1, SIGN(delta) * LINES);
     }
     
